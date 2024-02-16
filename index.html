@@ -299,5 +299,31 @@
         },
       });
     </script>
+
+    <script>
+      //hamburger dan clickOffcanvas sama saja hanya clickOffcanvas menggunakan class bootstrap
+
+      // const hamburger = document.querySelector(".navbar-toggler");
+      const myOffcanvas = document.querySelector(".offcanvas");
+      const clickOffcanvas = document.querySelector(".offcanvas");
+      const stickyTop = document.querySelector(".sticky-top");
+      // const buttonClose = document.querySelector(".btn-close");
+
+      // hamburger.addEventListener("click", function () {
+      //   stickyTop.style.overflow = "visible";
+      // });
+
+      clickOffcanvas.addEventListener("show.bs.offcanvas", function () {
+        stickyTop.style.overflow = "visible";
+      });
+
+      myOffcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        stickyTop.style.overflow = "hidden";
+      });
+
+      // buttonClose.addEventListener("click", function () {
+      //   stickyTop.style.overflow = "hidden";
+      // });
+    </script>
   </body>
 </html>
